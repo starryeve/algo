@@ -1,7 +1,7 @@
 /*
  * @Author: zengfh
  * @Date: 2022-01-09 12:27:12
- * @LastEditTime: 2022-01-09 13:13:13
+ * @LastEditTime: 2022-01-09 13:16:03
  * @Description:
  */
 
@@ -40,7 +40,7 @@
   }
 
 
-  return stack.length > 0 ? false : true; // 注意判断栈中是否还有元素，有的话证明左括号冗余（情况1）
+  return stack.length === 0; // 注意判断栈中是否还有元素，有的话证明左括号冗余（情况1）
 };
 
 
