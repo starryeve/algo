@@ -23,7 +23,7 @@ MyQueue.prototype.pop = function(x) {
   return this.stack2.pop();
 }
 
-MyQueue.prototype.top = function() {
+MyQueue.prototype.peek = function() {
   const top = this.pop();
   this.stack2.push(top);
 
@@ -31,5 +31,5 @@ MyQueue.prototype.top = function() {
 }
 
 MyQueue.prototype.empty = function() {
-  return this.stack1.length || this.stack2.length;
+  return this.stack1.length <= 0 && this.stack2.length <= 0;
 }
