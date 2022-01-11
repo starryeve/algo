@@ -2,7 +2,7 @@
  * @Author: zengfh
  * @Date: 2022-01-10 15:48:26
  * @LastEditTime: 2022-01-10 16:30:04
- * @Description: 
+ * @Description: 单调栈适合解决数组中下一个更大的元素
  */
 /** 双重for循环，时间复杂度为O（n），空间复杂度为O（1）
  * @param {number[]} temperatures
