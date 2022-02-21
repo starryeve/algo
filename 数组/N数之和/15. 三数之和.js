@@ -1,7 +1,7 @@
 /*
  * @Author: zengfh
  * @Date: 2021-12-11 16:50:05
- * @LastEditTime: 2021-12-11 17:56:43
+ * @LastEditTime: 2022-02-21 08:01:47
  * @Description: 可以按照两数之和的思路，外层遍历nums，选定一个nums[i]作为三数中的第一个数，
  * 再从i+1开始，找出剩余的两个数字 
  */
@@ -36,7 +36,7 @@ const threeSum = function(nums) {
   if(len < 3) return [];
 
   nums.sort((a,b) => a - b);
-  
+
   for (let i = 0; i < len - 2; i++) {
     if(nums[i] > 0) break;
     let l = i + 1, r = len - 1;
