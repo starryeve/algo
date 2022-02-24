@@ -1,7 +1,7 @@
 /*
  * @Author: zengfh
  * @Date: 2022-02-24 08:18:58
- * @LastEditTime: 2022-02-24 08:53:33
+ * @LastEditTime: 2022-02-24 08:58:52
  * @Description: 
  */
 
@@ -15,7 +15,7 @@ function TreeNode(val, left, right) {
  * @return {number}
  */
 //  var maxDepth = function(root) {
-//   // 1. 确定递归参数，只需要传入树的根节点root
+//   // 1. 确定递归参数和参数返回值，只需要传入树的根节点root
 
 //   // 2. 确定递归终止条件
 
