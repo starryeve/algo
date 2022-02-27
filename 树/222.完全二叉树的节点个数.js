@@ -5,6 +5,9 @@
  * @Description: 
  */
 
+/*
+Time Complexity: O(n)
+*/
 var countNodes = function(root) {
   // 1. 确定递归参数和返回值，传入一棵树的根节点，返回该树的节点数
 
