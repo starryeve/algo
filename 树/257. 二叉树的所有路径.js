@@ -1,7 +1,7 @@
 /*
  * @Author: zengfh
  * @Date: 2022-02-27 09:50:48
- * @LastEditTime: 2022-02-27 10:19:16
+ * @LastEditTime: 2022-02-27 10:34:08
  * @Description: 
  */
 const binaryTreePaths = function(root) {
@@ -24,16 +24,14 @@ const binaryTreePaths = function(root) {
     }
 
     // 3. 编写单层逻辑
-
-   
     if(root.left) {
       traversal(root.left, path, res)
-      // path.pop()
+      path.pop()
     }
 
     if(root.right) {
       traversal(root.right, path, res)
-      // path.pop()
+      path.pop()
     }
   }
 
