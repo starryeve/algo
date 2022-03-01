@@ -18,25 +18,24 @@ const buildTree = function(preOrder, inOrder) {
     if(preOrder.length === 0) return null
 
     // 2. 前序遍历数组第一个元素，就是当前的中间节点
-    let rootVal = preOrder[0]
-    const root = new TreeNode(rootVal, null, null)
+    let rootVal = preOrder.shift()
+    const root = new TreeNode(rootVal)
 
     // 3. 找切割点
-    let delimiter
-    for (delimiter = 0; delimiter < inOrder.length; delimiter++) {
-      if(inOrder[delimiter] === rootVal)  break
-    }
-
+    let delimiter = inOrder.indexOf(rootVal)
+  
     // 4. 切割中序数组，得到 中序左数组和中序右数组
     let leftInOrder = inOrder.slice(0, delimiter), rightInOrder = inOrder.slice(delimiter + 1)
     // 5. 切割前序数组，得到 前序左数组和前序右数组
-    let leftPreOrder = preOrder.slice(1, 1 + leftInOrder.length), 
-    rightPreOrder = preOrder.slice(1 + leftInOrder.length)
+    let leftPreOrder = preOrder.slice(0, delimiter),
+    rightPreOrder = preOrder.slice(delimiter)
 
     // 6. 生成左右子树
-    root.left = traversal(leftInOrder, leftPreOrder)
-    root.right = traversal(rightInOrder, rightPreOrder)
+    root.left = traversal(leftPreOrder, leftInOrder)
+    root.right = traversal(rightPreOrder, rightInOrder)
 
     return root
   }
+
+  return  traversal(preOrder, inOrder)
 }
