@@ -1,7 +1,7 @@
 /*
  * @Author: zengfh
  * @Date: 2022-01-11 21:39:25
- * @LastEditTime: 2022-01-11 21:53:11
+ * @LastEditTime: 2022-03-03 08:57:22
  * @Description: 
  */
 
@@ -11,6 +11,8 @@
  * @return {number[][]}
  */
  var combine = function(n, k) {
+  // 定义两个变量，一个用来存放符合条件的单一结果,
+  // 一个用来存放符合条的结果集
   const res = [];
   const path = [];
 
@@ -21,11 +23,17 @@
       return;
     }
 
-    for (let i = startIndex; i <= n ; i++) {
-      path.push(i);
-      backtracking(n, k, i + 1);
-      path.pop();
-    }
+   for (let i = startIndex; i <= n; i++) {
+   
+     // 剪枝。如果 for 循环选择的起始位置之后的元素个数 已经不足 k
+     if(n - i + 1 + path.length >= k) {
+      path.push(i)
+      backtracking(n, k, i+1)
+      path.pop()
+     }
+
+    
+   }
   }
 
   backtracking(n, k, 1);
