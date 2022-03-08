@@ -14,7 +14,9 @@
   const path = []
 
   function backtracking(candidates , sum, target, startIndex) {
-
+    if(sum > target) {
+      return 
+    }
     if(sum === target) {
       res.push([...path])
       return
@@ -23,7 +25,7 @@
     for (let i = startIndex; i < candidates.length; i++) {
       sum += candidates[i]
       path.push(candidates[i])
-      backtracking(candidates, sum, target, startIndex)
+      backtracking(candidates, sum, target, i)
       sum -= candidates[i]
       path.pop()
     }
