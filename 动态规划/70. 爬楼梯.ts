@@ -1,7 +1,7 @@
 /*
  * @Author: zengfh
  * @Date: 2022-03-11 08:21:24
- * @LastEditTime: 2022-03-13 08:51:26
+ * @LastEditTime: 2022-03-22 08:28:55
  * @Description: 
  */
 const climbStairs = function(n: number): number {
@@ -22,10 +22,12 @@ input: process.stdin,
 output: process.stdout
 })
 
-rl.on('line', data => {
+rl.on('line',( data: string) => {
    const n = parseInt(data)
    console.log( climbStairs(n) )
 })
+
+export {}
 
 
 
