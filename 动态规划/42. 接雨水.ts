@@ -1,7 +1,7 @@
 /*
  * @Author: zengfh
  * @Date: 2022-04-01 09:16:20
- * @LastEditTime: 2022-04-01 09:25:42
+ * @LastEditTime: 2022-04-01 10:00:52
  * @Description: 
  */
 const trap = function(height: number[]): number{
