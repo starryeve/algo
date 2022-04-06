@@ -1,7 +1,7 @@
 /*
  * @Author: zengfh
  * @Date: 2022-04-06 15:25:01
- * @LastEditTime: 2022-04-06 17:46:10
+ * @LastEditTime: 2022-04-06 18:05:00
  * @Description: 
  */
 const readline = require('readline')
@@ -26,7 +26,7 @@ rl.on('line', line => {
         for(const key in map) {
             if(map[key] === 1)    {
                 res = parseInt(key) < res ? parseInt(key) : res
-            }    
+            }
         }
         res = res === Infinity ? -1 : res
         console.log(res)
