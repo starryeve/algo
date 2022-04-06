@@ -1,31 +1,28 @@
 /*
  * @Author: zengfh
  * @Date: 2022-04-04 13:50:06
- * @LastEditTime: 2022-04-04 13:55:39
+ * @LastEditTime: 2022-04-06 08:56:33
  * @Description: 
  */
-function buildHeap(items) {
-  if(items.length <= 1)	return
+function buildHeap(arr) {
   let cur = 1
-  while(cur < items.length) {
-    heapify(items, cur)
+  while(cur < arr.length) {
+    heapify(arr, cur)
     cur++
   }
 }
 
-function heapify(items, i) {
+function heapify(arr, i) {
   let pI = Math.floor((i - 1) / 2)
-  while(pI >= 0 && items[i] > items[pI]) {
-		swap(items, i , pI) // 交换
+  while(pI >= 0 && arr[i] < arr[pI]) {
+		[arr[i], arr[pI]] = [arr[pI], arr[i]]
     i = pI
     pI = Math.floor((i - 1) / 2)
   }
 }
 
-function swap(items, i, j) {
-  [items[i], items[j]] = [items[j], items[i]]
-}
 
-const arr = [6,5,4,1,3,2,8]
+
+const arr = [233,233,233,233,233,233,234,233,233,233,233]
 buildHeap(arr)
 console.log(arr);

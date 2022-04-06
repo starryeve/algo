@@ -1,8 +1,8 @@
 /*
  * @Author: zengfh
  * @Date: 2022-04-04 14:37:45
- * @LastEditTime: 2022-04-04 15:13:05
- * @Description: 
+ * @LastEditTime: 2022-04-05 09:32:11
+ * @Description: 建堆时间为 O(n), 排序时间 O(nlogn)
  */
 const heapSort = function(arr) {
   let validSize = arr.length
@@ -11,7 +11,6 @@ const heapSort = function(arr) {
   while(validSize > 0) {
     [arr[0], arr[validSize - 1]] = [arr[validSize - 1], arr[0]] // 交换堆顶元素与有效序列最后一个元素
     buildHeap(arr, --validSize)
-    console.log(arr);
   }
 }
 
@@ -34,6 +33,5 @@ function heapify(arr, i) {
 }
 
 const arr = [2,1,3,4,2]
-
 heapSort(arr)
 console.log(arr);
