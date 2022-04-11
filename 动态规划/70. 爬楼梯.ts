@@ -1,14 +1,16 @@
 /*
  * @Author: zengfh
  * @Date: 2022-03-11 08:21:24
- * @LastEditTime: 2022-03-22 08:28:55
+ * @LastEditTime: 2022-04-09 09:57:54
  * @Description: 
  */
+
+
 const climbStairs = function(n: number): number {
   if(n<=2)    return n
   const dp = new Array<number>(n+1).fill(0)
   dp[1] = 1
-  dp[2] = 2
+  dp[2] = 2 
   for(let i = 3; i <=n; i++) {
       dp[i] = dp[i-1] + dp[i-2]
   }

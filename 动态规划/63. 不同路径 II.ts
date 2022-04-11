@@ -1,7 +1,7 @@
 /*
  * @Author: zengfh
  * @Date: 2022-03-12 09:02:57
- * @LastEditTime: 2022-03-12 09:28:50
+ * @LastEditTime: 2022-04-09 10:08:48
  * @Description: 
  */
 function uniquePathsWithObstacles(obstacleGrid: number[][]): number {
@@ -16,8 +16,6 @@ function uniquePathsWithObstacles(obstacleGrid: number[][]): number {
     dp[0][j] =  obstacleGrid[0][j]
   }
 
-  console.log(dp);
-  
 
   for (let i = 1; i < m; i++) {
     for (let j = 1; j < n; j++) {
